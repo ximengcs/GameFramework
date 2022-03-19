@@ -15,9 +15,10 @@ namespace GameFramework.UI
         /// <summary>
         /// 实例化界面。
         /// </summary>
+        /// <param name="uiFormName">要实例化的界面名称</param>
         /// <param name="uiFormAsset">要实例化的界面资源。</param>
         /// <returns>实例化后的界面。</returns>
-        object InstantiateUIForm(object uiFormAsset);
+        object InstantiateUIForm(string uiFormName, object uiFormAsset);
 
         /// <summary>
         /// 创建界面。

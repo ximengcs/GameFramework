@@ -15,6 +15,7 @@ namespace GameFramework.UI
             private UIGroup m_UIGroup;
             private bool m_PauseCoveredUIForm;
             private object m_UserData;
+            private string m_Name;
 
             public OpenUIFormInfo()
             {
@@ -22,6 +23,7 @@ namespace GameFramework.UI
                 m_UIGroup = null;
                 m_PauseCoveredUIForm = false;
                 m_UserData = null;
+                m_Name = null;
             }
 
             public int SerialId
@@ -56,13 +58,22 @@ namespace GameFramework.UI
                 }
             }
 
-            public static OpenUIFormInfo Create(int serialId, UIGroup uiGroup, bool pauseCoveredUIForm, object userData)
+            public string Name
+            {
+                get
+                {
+                    return m_Name;
+                }
+            }
+
+            public static OpenUIFormInfo Create(int serialId, string name, UIGroup uiGroup, bool pauseCoveredUIForm, object userData)
             {
                 OpenUIFormInfo openUIFormInfo = ReferencePool.Acquire<OpenUIFormInfo>();
                 openUIFormInfo.m_SerialId = serialId;
                 openUIFormInfo.m_UIGroup = uiGroup;
                 openUIFormInfo.m_PauseCoveredUIForm = pauseCoveredUIForm;
                 openUIFormInfo.m_UserData = userData;
+                openUIFormInfo.m_Name = name;
                 return openUIFormInfo;
             }
 
@@ -72,6 +83,7 @@ namespace GameFramework.UI
                 m_UIGroup = null;
                 m_PauseCoveredUIForm = false;
                 m_UserData = null;
+                m_Name = null;
             }
         }
     }

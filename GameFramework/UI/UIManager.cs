@@ -628,99 +628,107 @@ namespace GameFramework.UI
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, false, null);
+            return OpenUIForm(uiFormName, uiFormAssetName, uiGroupName, Constant.DefaultPriority, false, null);
         }
 
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <param name="priority">加载界面资源的优先级。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName, int priority)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName, int priority)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, priority, false, null);
+            return OpenUIForm(uiFormName, uiFormAssetName, uiGroupName, priority, false, null);
         }
 
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <param name="pauseCoveredUIForm">是否暂停被覆盖的界面。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName, bool pauseCoveredUIForm)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName, bool pauseCoveredUIForm)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, pauseCoveredUIForm, null);
+            return OpenUIForm(uiFormName, uiFormAssetName, uiGroupName, Constant.DefaultPriority, pauseCoveredUIForm, null);
         }
 
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <param name="userData">用户自定义数据。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName, object userData)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName, object userData)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, false, userData);
+            return OpenUIForm(uiFormName, uiFormAssetName, uiGroupName, Constant.DefaultPriority, false, userData);
         }
 
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <param name="priority">加载界面资源的优先级。</param>
         /// <param name="pauseCoveredUIForm">是否暂停被覆盖的界面。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName, int priority, bool pauseCoveredUIForm)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName, int priority, bool pauseCoveredUIForm)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, priority, pauseCoveredUIForm, null);
+            return OpenUIForm(uiFormName, uiFormAssetName, uiGroupName, priority, pauseCoveredUIForm, null);
         }
 
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <param name="priority">加载界面资源的优先级。</param>
         /// <param name="userData">用户自定义数据。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName, int priority, object userData)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName, int priority, object userData)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, priority, false, userData);
+            return OpenUIForm(uiFormName, uiFormAssetName, uiGroupName, priority, false, userData);
         }
 
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <param name="pauseCoveredUIForm">是否暂停被覆盖的界面。</param>
         /// <param name="userData">用户自定义数据。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName, bool pauseCoveredUIForm, object userData)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName, bool pauseCoveredUIForm, object userData)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, pauseCoveredUIForm, userData);
+            return OpenUIForm(uiFormName, uiFormAssetName, uiGroupName, Constant.DefaultPriority, pauseCoveredUIForm, userData);
         }
 
         /// <summary>
         /// 打开界面。
         /// </summary>
+        /// <param name="uiFormName">界面名称</param>
         /// <param name="uiFormAssetName">界面资源名称。</param>
         /// <param name="uiGroupName">界面组名称。</param>
         /// <param name="priority">加载界面资源的优先级。</param>
         /// <param name="pauseCoveredUIForm">是否暂停被覆盖的界面。</param>
         /// <param name="userData">用户自定义数据。</param>
         /// <returns>界面的序列编号。</returns>
-        public int OpenUIForm(string uiFormAssetName, string uiGroupName, int priority, bool pauseCoveredUIForm, object userData)
+        public int OpenUIForm(string uiFormName, string uiFormAssetName, string uiGroupName, int priority, bool pauseCoveredUIForm, object userData)
         {
             if (m_ResourceManager == null)
             {
@@ -730,6 +738,11 @@ namespace GameFramework.UI
             if (m_UIFormHelper == null)
             {
                 throw new GameFrameworkException("You must set UI form helper first.");
+            }
+
+            if (string.IsNullOrEmpty(uiFormName))
+            {
+                throw new GameFrameworkException("UI form name is invalid.");
             }
 
             if (string.IsNullOrEmpty(uiFormAssetName))
@@ -749,11 +762,11 @@ namespace GameFramework.UI
             }
 
             int serialId = ++m_Serial;
-            UIFormInstanceObject uiFormInstanceObject = m_InstancePool.Spawn(uiFormAssetName);
+            UIFormInstanceObject uiFormInstanceObject = m_InstancePool.Spawn(uiFormName);
             if (uiFormInstanceObject == null)
             {
                 m_UIFormsBeingLoaded.Add(serialId, uiFormAssetName);
-                m_ResourceManager.LoadAsset(uiFormAssetName, priority, m_LoadAssetCallbacks, OpenUIFormInfo.Create(serialId, uiGroup, pauseCoveredUIForm, userData));
+                m_ResourceManager.LoadAsset(uiFormAssetName, priority, m_LoadAssetCallbacks, OpenUIFormInfo.Create(serialId, uiFormName, uiGroup, pauseCoveredUIForm, userData));
             }
             else
             {
@@ -990,7 +1003,7 @@ namespace GameFramework.UI
             }
 
             m_UIFormsBeingLoaded.Remove(openUIFormInfo.SerialId);
-            UIFormInstanceObject uiFormInstanceObject = UIFormInstanceObject.Create(uiFormAssetName, uiFormAsset, m_UIFormHelper.InstantiateUIForm(uiFormAsset), m_UIFormHelper);
+            UIFormInstanceObject uiFormInstanceObject = UIFormInstanceObject.Create(uiFormAssetName, uiFormAsset, m_UIFormHelper.InstantiateUIForm(openUIFormInfo.Name, uiFormAsset), m_UIFormHelper);
             m_InstancePool.Register(uiFormInstanceObject, true);
 
             InternalOpenUIForm(openUIFormInfo.SerialId, uiFormAssetName, openUIFormInfo.UIGroup, uiFormInstanceObject.Target, openUIFormInfo.PauseCoveredUIForm, true, duration, openUIFormInfo.UserData);
